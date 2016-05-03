@@ -1,0 +1,286 @@
+/* auther Biyoner */
+/* reset */
+body, h1, h2, h3, h4, h5, h6, hr, p,
+blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */
+th, td, /* table elements 表格元素 */
+img/* img elements 图片元素 */{
+    border:medium none;
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: Helvetica; /*这里是说明调用来的字体名字*/
+    src: url("/res/Helvetica.ttf"); /*这里是字体文件路径*/
+}
+/** 设置默认字体 **/
+body,button, input, select, textarea {
+    font-family:  Helvetica,Verdana,tahoma, Srial, sans-serif;
+}
+h1, h2, h3, h4, h5, h6 { font-size: 100%; }
+em{font-style:normal;}
+/** 重置列表元素 **/
+ul,ol { list-style: none; }
+/** 重置超链接元素 **/
+a { text-decoration: none; color:#333;}
+a:hover { text-decoration: underline; color:#F40; }
+/** 重置图片元素 **/
+img{ border:0px;}
+/** 重置表格元素 **/
+table { border-collapse: collapse; border-spacing: 0; }
+a:link,a:visited{text-decoration: none}
+.clear{clear: both}
+
+
+/* index */
+
+/* header*/
+.header{
+    background-color: #6b7a94;
+    height: 35px;
+}
+.wrap{
+    width: 75%;
+    margin:0 auto;
+    -moz-transition:all .2s linear;
+    -webkit-transition:all .2s linear;
+    -o-transition:all .2s linear;
+    -ms-transition:all .2s linear;
+
+}
+
+.cssmenu{
+    float:right;
+    color:#96e8fc;
+    font-size: 1.2em;
+}
+.cssmenu ul li {
+    display: inline-block;
+}
+.cssmenu ul li a {
+    color:#fff;*
+    display: block;
+    margin:10px;
+    font-family: Helvetica;
+}
+.cssmenu li> a:hover {
+    color: #ACEAFA;
+}
+
+#bg-img{
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+
+.header-bottom{
+    padding:2% 0;
+    /*background-color: chartreuse;*/
+}
+
+.logo{
+    float:left;
+    margin-right: 3.6% ;
+}
+
+.nav ul{
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    width: 50em;
+
+}
+
+.nav ul li{
+   float: left;
+    font-size: 1.2em;
+    width: 5em;
+    height: 37px;
+    line-height: 37px;
+    text-align: center;
+    margin-right:0.3%;
+    /*background-color: black;*/
+    /*border: dotted;*/
+}
+
+.nav ul li a{
+    color: #2a85a0;
+    text-decoration: none;
+    display: block;
+    width: 120px;
+    height: 37px;
+    font-family: Helvetica;
+    font-size: 1.2em;
+}
+
+
+.header-bottom-right{
+    float:right;
+    width:200px;
+}
+.search {
+    background:#fff;
+    border: 1px solid #ddd;
+    position: relative;
+    float:left;
+    margin:6px 20px 0 0;
+}
+.search input[type="text"] {
+    border: none;
+    outline: none;
+    background: none;
+    font-size:0.85em;
+    font-family: 'Exo 2', sans-serif;
+    color:#777;
+    width:120px;
+    padding:7px;
+    -webkit-apperance:none;
+    margin:0;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+}
+.search input[type="text"]:focus{
+    width:130px;
+}
+.search input[type="submit"] {
+    border: none;
+    text-indent: -9999px;
+    outline:none;
+    cursor: pointer;
+    background: url("../images/search.png") no-repeat 0px 3px;
+    width:20px;
+    height:25px;
+    padding:8px;
+}
+.search input[type="submit"]:active {
+    position:relative;
+}
+
+/*main*/
+.main{
+    padding: 2% 0;
+    margin-bottom: auto;
+    position: relative;
+
+}
+
+.pic1{
+    position: absolute;
+    padding: 0;
+    z-index: 1;
+    top:40%;
+    left: 180px;
+    background-color: #1f6377;
+    width: 60%;
+
+}
+.inf1{
+    position: absolute;
+    top: 280%;
+    right: 180px;
+    width: 40%;
+    height: 430%;
+
+
+    z-index: 11;
+    background-color: #979798;
+    filter: alpha(opacity=60);
+    opacity: 0.60;
+}
+.pic2{
+    position: absolute;
+    padding: 0;
+    z-index: 1;
+    top:1000%;
+    left: 180px;
+    width: 50%;
+
+}
+#inf2{
+    position: absolute;
+    top: 1200%;
+    right: 180px;
+    width: 40%;
+    height: 520%;
+
+    z-index: 11;
+    background-color: #979798;
+    filter: alpha(opacity=50);
+    opacity: 0.50;
+    display: none;
+}
+
+#icon1{
+    position: absolute;
+    top:1000%;
+    right: 180px;
+    width: 7%;
+}
+.pic3{
+    position: absolute;
+    padding: 0;
+    z-index: 1;
+    top:1900%;
+    right: 180px;
+    width: 50%;
+}
+#inf3{
+    position: absolute;
+    top: 2100%;
+    left: 180px;
+    width: 40%;
+    height: 520%;
+
+    z-index: 11;
+    background-color: #979798;
+    filter: alpha(opacity=50);
+    opacity: 0.50;
+    display: none;
+}
+#icon2{
+    position: absolute;
+    top:1900%;
+    left: 180px;
+    width: 7%;
+}
+
+.footer{
+    background-color:#6b7a94;
+    height: 50px;
+    text-align: center;
+    margin-top: 115%;
+}
+.fw{
+    color: white;
+    padding: 0.5%;
+
+}
+.content{
+    color: white;
+    font-size: 1.2em;
+}
+.content li{
+    margin: 10px 5px;
+
+}
+
+.tb
+{
+    list-style: square inside url('/images/content.png');
+}
+.tb a{
+    color: black;
+}
+.title{
+    font-size: 1.5em;
+}
+.title a{
+    color: white;
+}
+
+

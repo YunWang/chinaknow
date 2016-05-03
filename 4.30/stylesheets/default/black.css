@@ -1,0 +1,176 @@
+/* @group Imports
+============================================================ */
+
+@import url("shared.css");
+
+/* @end */
+
+
+
+/* @group Generic
+============================================================ */
+
+body,
+body #body-wrapper { background-color: #555555; }
+
+#header ul.nav li a,
+#footer, #footer .button { color: #f5f5f5; }
+
+#header ul.nav li a:hover,
+#header ul.nav li a.active,
+#header ul.nav li ul li a,
+#topbar{
+  color: white;
+}
+
+/* @end */
+
+
+
+
+
+
+
+
+
+
+/* @group Content Elements
+============================================================ */
+
+
+
+/* @group Links
+------------------------------------------------------------ */
+
+a       { color: black; }
+a:hover { color: #666; }
+
+
+
+#preview #showcase .rounded-corners-top {
+  background-image: url(../../images/layout/default/black/preview_round-corners_top.png);
+}
+
+
+body.boxed { background-color: #444 !important; }
+
+body.boxed #body-wrapper { 
+  box-shadow: 0 0 35px #f5f5f5;
+  -moz-box-shadow: 0 0 35px #f5f5f5;
+  -webkit-box-shadow: 0 0 35px #f5f5f5;
+  *border: 1px solid #666; /* IE fix */
+}
+
+
+body.preview #main { 
+  background-image: url(../../images/layout/default/black/head.png); 
+}
+
+/* @end */
+
+/* @end */
+
+
+
+
+
+
+
+
+
+
+/* @group Layout Structure
+============================================================ */
+
+
+
+/* @group Header
+------------------------------------------------------------ */
+
+#header {
+  background: url(../../images/layout/default/black/head.png) repeat-x;
+}
+
+
+
+/* Navigation */
+
+
+
+/* Dropdown Menu */
+
+#header ul.nav li ul {
+  background-image: url(../../images/layout/default/black/nav_dropdown_arrow.gif);
+}
+
+#header ul.nav li ul li a {
+  background-color: #333;
+  border-color: #777;
+}
+
+#header ul.nav li ul li a:hover {
+  background-color: #3b3b3b;
+}
+
+#header ul.nav li ul li:last-child a,
+#header ul.nav li ul li ul li:last-child a {
+  border-bottom-color: #5E5E5E;
+}
+
+/* @end */
+
+
+
+/* @group Topbar
+------------------------------------------------------------ */
+
+#topbar {
+  background: #474747 url(../../images/layout/default/black/topbar_bg.png) repeat-x;
+}
+
+#topbar strong { text-shadow: 1px 1px 1px black; }
+
+/* @end */
+
+
+
+/* @group Footer
+------------------------------------------------------------ */
+
+#footer {
+	background-image: url(../../images/layout/default/black/footer_bg.png);
+}
+
+#footer .hr,
+#footer .box h4,
+#footer .nav ul li a {
+  background-image: url(../../images/layout/default/black/footer_line.gif);
+}
+
+#footer a { color: #808080; }
+
+#footer .nav ul li {
+  background-image: url(../../images/layout/default/black/footer_list-arrow.gif);
+}
+
+#footer .button       { background: #333; }
+#footer .button:hover { background: #444; }
+
+/* @end */
+
+
+
+/* @group Footerbar
+------------------------------------------------------------ */
+
+#footerbar,
+#footerbar a { color: #999; }
+
+#footerbar,
+body.footerbar-inline #footerbar .wrapper {
+  background-image: url(../../images/layout/default/black/footer_line.gif);
+}
+
+/* @end */
+
+/* @end */

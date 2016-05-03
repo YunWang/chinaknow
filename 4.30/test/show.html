@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>测试PHP和JavaScript交换参数</title>
+</head>
+<script type="text/javascript"> 
+function getProfile(str) {  
+    var arr = str;  
+	document.getElementById('name').innerHTML = arr.username;  
+    document.getElementById('nick').innerHTML = arr.id;  
+	// document.getElementById('email').innerHTML = arr.email; 
+	document.getElementById('website').innerHTML = arr.password; 
+}  
+</script> 
+<body>
+<div id="name"></div>
+<div id="nick"></div>
+<div id="email"></div>
+<div id="website"></div>
+</body> 
+<script type="text/javascript" src="../getUserName.php"></script> 
+</body>
+</html>

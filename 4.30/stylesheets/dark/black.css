@@ -1,0 +1,611 @@
+/* @group Generic
+============================================================ */
+
+
+
+/* @group Text Colors
+------------------------------------------------------------ */
+
+
+/* Light Grey */
+
+body, textarea, input,
+button, a.button,
+.post-data a,
+.paginator a,
+#comments .comment .content cite,
+#comments .comment .content cite a,
+#sidebar .box .nav ul li a,
+#bottombar .breadcrumbs a:hover,
+#bottombar .breadcrumbs a.active,
+#footerbar,
+#footerbar a {
+	color: #888;
+}
+
+
+/* Lighter Grey */
+
+a,
+h5, h6,
+h5 a, h6 a, /* IE6 Fix*/
+table.data th,
+table.data thead tr th.nobg,
+input[type=submit]:hover, input[type=reset]:hover,
+button:hover, a.button:hover,
+.paginator a:hover, .paginator .active,
+.post-data a:hover,
+#comments .comment .content cite a:hover,
+#sidebar .box .nav ul li a:hover,
+#footer a:hover,
+#footerbar a:hover {
+  color: #ddd;
+}
+
+
+/* White */
+
+h1, h2, h3, h4,
+h1 a, h2 a, h3 a, h4 a, /* IE6 Fix*/
+#topbar {
+  color: white;
+}
+
+
+/* Grey */
+
+a:hover,
+form fieldset legend,
+input[type=submit]:active, input[type=reset]:active,
+button:active, a.button:active,
+#comments .comment,
+#comments .comment a.reply-link:hover,
+#comments .comment .content a.meta-data:hover,
+#preview h3,
+#footer {
+  color: #6a6a6a;
+}
+
+
+/* Dark Grey */
+
+#comments .comment a.reply-link,
+#comments .comment .content a.meta-data,
+#bottombar .breadcrumbs a,
+#footer a {
+  color: #555;
+}
+
+/* @end */
+
+
+
+/* @group Backgrounds
+------------------------------------------------------------ */
+
+
+/* Black */
+
+body,
+body #body-wrapper,
+body.show-footerbar.footerbar-inline {
+  background-color: black;
+}
+
+
+/* Dark Grey */
+
+.img-frame, .frame,
+form input[type=text],
+form input[type=password],
+form textarea,
+pre, code.block,
+.paginator a, .paginator span,
+.toggler.active,
+#comments .comment {
+  background-color: #1A1A1A;
+}
+
+.content-frame,
+button, a.button, 
+input[type=submit], input[type=reset],
+.post-data,
+#sidebar .box .content,
+#sidebar .box .nav {
+	background-color: #1A1A1A;
+}
+
+
+/* Darker Grey */
+
+body.show-footerbar,
+.content-frame input[type=text],
+.content-frame input[type=password],
+.content-frame textarea,
+.content-frame button,
+.content-frame a.button, 
+.content-frame input[type=submit],
+.content-frame input[type=reset],
+.toggler,
+#bottombar,
+#footerbar {
+  background-color: #111;
+}
+
+/* @end */
+
+
+
+/* @group Borders
+------------------------------------------------------------ */
+
+
+/* Light Grey */
+
+form textarea:focus,
+form input[type=text]:focus,
+form input[type=password]:focus {
+  border: 1px solid #555;
+}
+
+
+/* Grey */
+
+form fieldset,
+.content-frame,
+button, a.button,
+input[type=submit], input[type=reset],
+.paginator a, .paginator span, .toggler,
+#sidebar .box .content,
+#sidebar .box .nav {
+  border: 1px solid #333;
+}
+
+.hr, .big-hr,
+body.no-boxed-sidebar .post-data {
+  border-top: 1px solid #333;
+}
+
+.underline-headings h3, .underline-headings h4, 
+.underline-headings h5, .underline-headings h6,
+h3.underline, h4.underline, h5.underline, h6.underline,
+body.no-boxed-sidebar .post-data,
+#sidebar .box .nav ul li a,
+#footer .box h4,
+#footer .nav ul li a {
+  border-bottom: 1px solid #333;
+}
+
+form input[type=text],
+form input[type=password],
+form textarea,
+input[type=submit]:active, input[type=reset]:active,
+button:active, a.button:active,
+pre, code.block,
+.img-frame, .frame,
+#comments .comment {
+  border: 1px solid #333;
+}
+
+
+/* Dark Grey */
+
+#topbar .wrapper,
+#main .wrapper,
+#bottombar,
+#footer,
+#footerbar,
+body.footerbar-inline #footerbar .wrapper {
+  border-top: 1px solid #2a2a2a;
+}
+
+/* @end */
+
+/* @end */
+
+
+
+
+
+
+
+
+
+
+/* @group Content Elements
+============================================================ */
+
+
+
+/* @group Lists
+------------------------------------------------------------ */
+
+ul.check li, ul.cross li, ul.mixed li {
+  background-image: url(../../images/layout/dark/black/list_icons.png);
+}
+
+/* @end */
+
+
+
+/* @group Tables
+------------------------------------------------------------ */
+
+thead tr th,
+table.data th,
+table.data td { border-top: 1px solid #333; }
+
+tfoot tr th,
+tfoot tr td { border-top: 3px solid #333; }
+
+
+/* Data Table */
+
+table.data {
+	border-right: 1px solid #333;
+	border-bottom: 1px solid #333;
+}
+
+table.data thead tr th { background-color: #2a2a2a; }
+
+table.data th,
+table.data td { border-left: 1px solid #333; }
+
+table.data tr.alt th,
+table.data tr.alt td,
+table.data tr th.alt,
+table.data tr td.alt { background-color: #1a1a1a; }
+
+/* @end */
+
+
+
+/* @group Forms
+------------------------------------------------------------ */
+
+
+/* jQuery Validation & AJAX Submit */
+
+form input[type=text].invalid,
+form input[type=password].invalid,
+form textarea.invalid,
+form input[type=text].invalid:focus,
+form input[type=password].invalid:focus,
+form textarea.invalid:focus {
+  border-color: #8f1d1d; /* Same color as .error */
+}
+
+/* @end */
+
+
+
+/* @group Dropcaps
+------------------------------------------------------------ */
+
+.dropcap-square,
+.dropcap-circle { color: black; }
+
+.dropcap-square { background: #888; }
+
+.dropcap-circle {
+  background-image: url(../../images/layout/dark/black/dropcap_circle.png);
+}
+
+/* @end */
+
+
+
+/* @group Highlights
+------------------------------------------------------------ */
+
+.highlight   { background: #d4b700; color: black; }
+.highlight-2 { background: #888;    color: black; }
+
+/* @end */
+
+
+
+/* @group Blockquotes
+------------------------------------------------------------ */
+
+blockquote {
+  background: url(../../images/layout/dark/black/blockquote_bg.png) no-repeat;
+}
+
+/* @end */
+
+
+
+/* @group Notifications
+------------------------------------------------------------ */
+
+.success, .notice, .warning, .error { border: 1px solid; }
+
+.success { background: #495934; border-color: #89b35d; color: #dfffbc; }
+.notice  { background: #345959; border-color: #56a4a6; color: #a5d8d9; }
+.warning { background: #404200; border-color: #998500; color: #e5d87e; }
+.error   { background: #330000; border-color: #8f1d1d; color: #c29b9b; }
+
+/* @end */
+
+/* @end */
+
+
+
+
+
+
+
+
+
+/* @group Custom Elements
+============================================================ */
+
+
+
+/* @group Paginator
+------------------------------------------------------------ */
+
+.paginator a,
+.paginator span {
+  border: 1px solid black;
+  border-left: none;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.paginator a:hover,
+.paginator .active { background: #2a2a2a; }
+
+/* @end */
+
+
+
+/* @group Toggler
+------------------------------------------------------------ */
+
+.toggler strong {
+  background-image: url(../../images/layout/dark/black/toggler_icons.gif);
+}
+
+/* @end */
+
+
+
+/* @group Lightbox
+------------------------------------------------------------ */
+
+.lightbox-image {
+  background-image: url(../../images/layout/dark/black/magnifier.png);
+}
+
+/* @end */
+
+
+
+/* @group Rounded Box
+------------------------------------------------------------ */
+
+.rounded-box .rounded-corners-lt,
+.rounded-box .rounded-corners-rt,
+.rounded-box .rounded-corners-lb,
+.rounded-box .rounded-corners-rb {
+  background-image: url(../../images/layout/dark/black/post-box_round-corners.png);
+}
+
+/* @end */
+
+
+
+/* @group Post Data
+------------------------------------------------------------ */
+
+.post-data { border-top: 1px solid black; }
+
+.post-data span { padding: 3px 6px; }
+
+.post-data span.date,
+.post-data span.categories,
+.post-data span.comments {
+  border-right: 1px solid black;
+  background-image: url(../../images/layout/dark/black/post-data_icons.png);
+}
+
+.post-data span.comments { border-right: none; }
+
+/* @end */
+
+
+
+/* @group Slider
+------------------------------------------------------------ */
+
+.slider .nivo-controlNav a {
+	background-image: url(../../images/layout/dark/black/slider_bullets.png) !important;
+}
+
+/* @end */
+
+
+
+/* @group Preview Showcase
+------------------------------------------------------------ */
+
+#preview #showcase .rounded-corners-top {
+  background-image: url(../../images/layout/dark/black/preview_round-corners_top.png);
+}
+
+#preview #showcase .rounded-corners-bottom {
+  background-image: url(../../images/layout/dark/black/preview_round-corners_bottom.png);
+}
+
+/* @end */
+
+
+
+/* @group Breadcrumbs
+------------------------------------------------------------ */
+
+.breadcrumbs span {
+  background-image: url(../../images/layout/dark/black/bc_arrow.gif);
+}
+
+.breadcrumbs span.info {
+  background-image: url(../../images/layout/dark/black/bc_info.png);
+}
+
+/* @end */
+
+/* @end */
+
+
+
+
+
+
+
+
+
+
+/* @group Layout Options
+============================================================ */
+
+
+
+/* @group Boxed
+------------------------------------------------------------ */
+
+body.boxed { background-color: #222 !important; }
+
+body.boxed #body-wrapper { 
+  box-shadow: 0 0 35px #111;
+  -moz-box-shadow: 0 0 35px #111;
+  -webkit-box-shadow: 0 0 35px #111;
+  *border: 1px solid #444; /* IE fix */
+}
+
+/* @end */
+
+
+
+/* @group Minimal-Layout
+------------------------------------------------------------ */
+
+body.minimal #header { background-image: none; }
+
+/* @end */
+
+
+
+/* @group No Boxes
+------------------------------------------------------------ */
+
+body.no-boxed-sidebar .post-box .post-data {
+  border-top: none;
+}
+
+/* @end */
+
+/* @end */
+
+
+
+
+
+
+
+
+
+
+/* @group Layout Structure
+============================================================ */
+
+
+
+/* @group Header
+------------------------------------------------------------ */
+
+#header {
+  background: url(../../images/layout/dark/black/head.png) repeat-x;
+}
+
+#header #logo h1 a {
+  background-image: url(../../images/layout/dark/black/logo.png);
+}
+
+
+/* Navigation */
+
+#header ul.nav li {
+  background-image: url(../../images/layout/dark/black/nav_bg.png);
+}
+
+#header ul.nav li a        { color: #bbb; }
+#header ul.nav li a:hover,
+#header ul.nav li a.active { color: white; }
+
+
+/* Dropdown Menu */
+
+#header ul.nav li ul {
+  background-image: url(../../images/layout/dark/black/nav_dropdown_arrow.gif);
+}
+
+#header ul.nav li ul li a {
+  background-color: #333;
+  border-color: #777;
+  color: white;
+}
+
+#header ul.nav li ul li a:hover {
+  background-color: #3b3b3b;
+}
+
+#header ul.nav li ul li:last-child a,
+#header ul.nav li ul li ul li:last-child a {
+  border-bottom-color: #777;
+}
+
+/* @end */
+
+
+
+/* @group Main
+------------------------------------------------------------ */
+
+#main { background: black; }
+
+/* @end */
+
+
+
+/* @group Sidebar
+------------------------------------------------------------ */
+
+#sidebar .box .nav ul li a {
+  background-image: url(../../images/layout/dark/black/sidebar_nav_list-arrow.gif);
+  _border-top: none; /* IE6 fix */
+}
+
+#sidebar .box .nav ul li:first-child a { border-top: none; }
+#sidebar .box .nav ul li:last-child a  { border-bottom: none; }
+
+#sidebar .box .nav ul li a:hover { background-color: #222; }
+
+/* @end */
+
+
+
+/* @group Footer
+------------------------------------------------------------ */
+
+#footer .nav ul li {
+  background-image: url(../../images/layout/dark/black/footer_list-arrow.gif);
+}
+
+#footer .button       { background: #282828; color: #bbb; }
+#footer .button:hover { background: #333; }
+
+/* @end */
+
+/* @end */

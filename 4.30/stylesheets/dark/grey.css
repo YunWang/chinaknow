@@ -1,0 +1,633 @@
+/* @group Generic
+============================================================ */
+
+
+
+/* @group Text Colors
+------------------------------------------------------------ */
+
+
+/* Light Grey */
+
+body, textarea, input,
+button, a.button,
+#sidebar .box .nav ul li a,
+.post-data a,
+.paginator a,
+#comments .comment .content cite,
+#comments .comment .content cite a,
+#bottombar .breadcrumbs a:hover,
+#bottombar .breadcrumbs a.active,
+#footerbar a:hover {
+	color: #ccc;
+}
+
+
+/* White */
+
+a,
+h1, h2, h3, h4, h5, h6,
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, /* IE6 Fix*/
+table.data th,
+table.data thead tr th.nobg,
+input[type=submit]:hover, input[type=reset]:hover,
+button:hover, a.button:hover,
+.paginator a:hover,
+#comments .comment .content cite a:hover,
+.post-data a:hover,
+#sidebar .box .nav ul li a:hover,
+#footer a:hover {
+  color: white;
+}
+
+
+/* Grey */
+
+a:hover,
+form fieldset legend,
+input[type=submit]:active, input[type=reset]:active,
+button:active, a.button:active,
+#comments .comment,
+#comments .comment a.reply-link:hover,
+#comments .comment .content a.meta-data:hover,
+#preview h3,
+#footer {
+  color: #999;
+}
+
+
+/* Dark Grey */
+
+#comments .comment a.reply-link,
+#comments .comment .content a.meta-data,
+#bottombar .breadcrumbs a,
+#footer a,
+#footerbar,
+#footerbar a {
+  color: #666;
+}
+
+/* @end */
+
+
+
+/* @group Backgrounds
+------------------------------------------------------------ */
+
+
+/* Black */
+
+body,
+body #body-wrapper,
+body.show-footerbar.footerbar-inline {
+  background-color: black;
+}
+
+
+/* Dark Grey */
+
+body.show-footerbar,
+.img-frame, .frame,
+form input[type=text],
+form input[type=password],
+form textarea,
+table.data thead tr th,
+pre, code.block,
+.paginator a, .paginator span,
+#comments .comment,
+.post-data,
+#topbar,
+#bottombar,
+#footerbar {
+  background-color: #1A1A1A;
+}
+
+.toggler.active {
+   background-color: #222;
+}
+
+/* Light Grey */
+
+table.data th,
+table.data td,
+.content-frame,
+button, a.button,
+input[type=submit], input[type=reset],
+#sidebar .box .content,
+#sidebar .box .nav {
+	background-color: #333;
+}
+
+/* @end */
+
+
+
+/* @group Borders
+------------------------------------------------------------ */
+
+
+/* Light Grey */
+
+form fieldset,
+form input[type=text]:focus,
+form input[type=password]:focus,
+form textarea:focus,
+.content-frame,
+button, a.button,
+input[type=submit], input[type=reset],
+.paginator a, .paginator span,
+#sidebar .box .content,
+#sidebar .box .nav {
+  border: 1px solid #5E5E5E;
+}
+
+.hr, .big-hr,
+body.no-boxed-sidebar .post-data {
+  border-top: 1px solid #5E5E5E;
+}
+
+.underline-headings h3, .underline-headings h4, 
+.underline-headings h5, .underline-headings h6,
+h3.underline, h4.underline, h5.underline, h6.underline,
+body.no-boxed-sidebar .post-data,
+#sidebar .box .nav ul li a {
+  border-bottom: 1px solid #5E5E5E;
+}
+
+
+/* Grey */
+
+form input[type=text],
+form input[type=password],
+form textarea,
+input[type=submit]:active, input[type=reset]:active,
+button:active, a.button:active, .toggler,
+pre, code.block,
+.img-frame, .frame,
+#comments .comment {
+  border: 1px solid #444;
+}
+
+#bottombar,
+#footer,
+#footerbar,
+body.footerbar-inline #footerbar .wrapper {
+  border-top: 1px solid #444;
+}
+
+
+/* Dark Grey */
+
+#topbar,
+#main,
+#footer .hr {
+  border-top: 1px solid #333;
+}
+
+#footer .box h4,
+#footer .nav ul li a {
+  border-bottom: 1px solid #333;
+}
+
+/* @end */
+
+/* @end */
+
+
+
+
+
+
+
+
+
+
+/* @group Content Elements
+============================================================ */
+
+
+
+/* @group Lists
+------------------------------------------------------------ */
+
+ul.check li, ul.cross li, ul.mixed li {
+  background-image: url(../../images/layout/dark/grey/list_icons.png);
+}
+
+/* @end */
+
+
+
+/* @group Tables
+------------------------------------------------------------ */
+
+thead tr th,
+table.data th,
+table.data td { border-top: 1px solid #5E5E5E; }
+
+tfoot tr th,
+tfoot tr td { border-top: 3px solid #5E5E5E; }
+
+
+/* Data Table */
+
+table.data {
+	border-right: 1px solid #5E5E5E;
+	border-bottom: 1px solid #5E5E5E;
+}
+
+table.data th,
+table.data td { border-left: 1px solid #5E5E5E; }
+
+table.data tr.alt th,
+table.data tr.alt td,
+table.data tr th.alt,
+table.data tr td.alt { background-color: #282828; }
+
+/* @end */
+
+
+
+/* @group Forms
+------------------------------------------------------------ */
+
+
+/* jQuery Validation & AJAX Submit */
+
+form input[type=text].invalid,
+form input[type=password].invalid,
+form textarea.invalid,
+form input[type=text].invalid:focus,
+form input[type=password].invalid:focus,
+form textarea.invalid:focus {
+  border-color: #8f1d1d; /* Same color as .error */
+}
+
+/* @end */
+
+
+
+/* @group Dropcaps
+------------------------------------------------------------ */
+
+.dropcap-square,
+.dropcap-circle { color: #282828; }
+
+.dropcap-square { background: #ccc; }
+
+.dropcap-circle {
+  background-image: url(../../images/layout/dark/grey/dropcap_circle.png);
+}
+
+/* @end */
+
+
+
+/* @group Highlights
+------------------------------------------------------------ */
+
+.highlight   { background: #FFDC00; color: black; }
+.highlight-2 { background: #ccc;    color: black; }
+
+.highlight, .highlight-2 { 
+  box-shadow: 0 1px 4px black;
+  -moz-box-shadow: 0 1px 4px black;
+  -webkit-box-shadow: 0 1px 4px black;
+}
+
+/* @end */
+
+
+
+/* @group Blockquotes
+------------------------------------------------------------ */
+
+blockquote {
+  background: url(../../images/layout/dark/grey/blockquote_bg.png) no-repeat;
+}
+
+/* @end */
+
+
+
+/* @group Notifications
+------------------------------------------------------------ */
+
+.success, .notice, .warning, .error { border: 1px solid; }
+
+.success { background: #495934; border-color: #89b35d; color: #dfffbc; }
+.notice  { background: #345959; border-color: #56a4a6; color: #a5d8d9; }
+.warning { background: #404200; border-color: #998500; color: #e5d87e; }
+.error   { background: #330000; border-color: #8f1d1d; color: #c29b9b; }
+
+/* @end */
+
+/* @end */
+
+
+
+
+
+
+
+
+
+/* @group Custom Elements
+============================================================ */
+
+
+
+/* @group Paginator
+------------------------------------------------------------ */
+
+.paginator a,
+.paginator span {
+  border: 1px solid #282828;
+  border-left: none;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.paginator a:hover,
+.paginator .active { background-color: #111; }
+
+/* @end */
+
+
+
+/* @group Toggler
+------------------------------------------------------------ */
+
+.toggler strong {
+  background-image: url(../../images/layout/dark/grey/toggler_icons.gif);
+}
+
+/* @end */
+
+
+
+/* @group Lightbox
+------------------------------------------------------------ */
+
+.lightbox-image {
+  background-image: url(../../images/layout/dark/grey/magnifier.png);
+}
+
+/* @end */
+
+
+
+/* @group Rounded Box
+------------------------------------------------------------ */
+
+.rounded-box .rounded-corners-lt,
+.rounded-box .rounded-corners-rt,
+.rounded-box .rounded-corners-lb,
+.rounded-box .rounded-corners-rb {
+  background-image: url(../../images/layout/dark/grey/post-box_round-corners.png);
+}
+
+/* @end */
+
+
+
+/* @group Post Data
+------------------------------------------------------------ */
+
+.post-data { border-top: 1px solid #282828; }
+
+.post-data span { padding: 3px 6px; }
+
+.post-data span.date,
+.post-data span.categories,
+.post-data span.comments {
+  border-right: 1px solid #282828;
+  background-image: url(../../images/layout/dark/grey/post-data_icons.png);
+}
+
+.post-data span.comments { border-right: none; }
+
+/* @end */
+
+
+
+/* @group Slider
+------------------------------------------------------------ */
+
+.slider .nivo-controlNav a {
+	background-image: url(../../images/layout/dark/grey/slider_bullets.png) !important;
+}
+
+/* @end */
+
+
+
+/* @group Preview Showcase
+------------------------------------------------------------ */
+
+#preview {
+  background: url(../../images/layout/dark/grey/preview_showcase_shadow.png) center 365px no-repeat;
+}
+
+#preview #showcase .rounded-corners-top {
+  background-image: url(../../images/layout/dark/grey/preview_round-corners_top.png);
+}
+
+#preview #showcase .rounded-corners-bottom {
+  background-image: url(../../images/layout/dark/grey/preview_round-corners_bottom.png);
+}
+
+/* @end */
+
+
+
+/* @group Breadcrumbs
+------------------------------------------------------------ */
+
+.breadcrumbs span {
+  background-image: url(../../images/layout/dark/grey/bc_arrow.gif);
+}
+
+.breadcrumbs span.info {
+  background-image: url(../../images/layout/dark/grey/bc_info.png);
+}
+
+/* @end */
+
+/* @end */
+
+
+
+
+
+
+
+
+
+
+/* @group Layout Options
+============================================================ */
+
+
+
+/* @group Boxed
+------------------------------------------------------------ */
+
+body.boxed { background-color: #333 !important; }
+
+body.boxed #body-wrapper { 
+  box-shadow: 0 0 35px black;
+  -moz-box-shadow: 0 0 35px black;
+  -webkit-box-shadow: 0 0 35px black;
+  *border: 1px solid #666; /* IE fix */
+}
+
+/* @end */
+
+
+
+/* @group Minimal Layout
+------------------------------------------------------------ */
+
+body.minimal #header,
+body.minimal #main { background-image: none; }
+
+/* @end */
+
+
+
+/* @group Preview
+------------------------------------------------------------ */
+
+body.preview #main { 
+  background-image: url(../../images/layout/dark/grey/head.png); 
+}
+
+/* @end */
+
+
+
+/* @group No Boxes
+------------------------------------------------------------ */
+
+body.no-boxed-sidebar .post-box .post-data {
+  border-top: none;
+}
+
+/* @end */
+
+/* @end */
+
+
+
+
+
+
+
+
+
+
+/* @group Layout Structure
+============================================================ */
+
+
+
+/* @group Main
+------------------------------------------------------------ */
+
+#main {
+  background: #282828 url(../../images/layout/dark/grey/main_gradient.png) repeat-x;
+}
+
+/* @end */
+
+
+
+/* @group Header
+------------------------------------------------------------ */
+
+#header {
+  background: url(../../images/layout/dark/grey/head.png) repeat-x;
+}
+
+#header #logo h1 a {
+  background-image: url(../../images/layout/dark/grey/logo.png);
+}
+
+
+/* Navigation */
+
+#header ul.nav li {
+  background-image: url(../../images/layout/dark/grey/nav_bg.png);
+}
+
+#header ul.nav li a        { color: #bbb; }
+#header ul.nav li a:hover,
+#header ul.nav li a.active { color: white; }
+
+
+/* Dropdown Menu */
+
+#header ul.nav li ul {
+  background-image: url(../../images/layout/dark/grey/nav_dropdown_arrow.gif);
+}
+
+#header ul.nav li ul li a{
+  background-color: #333;
+  border-color: #777;
+  color: white;
+}
+
+#header ul.nav li ul li a:hover {
+  background-color: #3b3b3b;
+}
+
+#header ul.nav li ul li:last-child a,
+#header ul.nav li ul li ul li:last-child a {
+  border-bottom-color: #777;
+}
+
+/* @end */
+
+
+
+/* @group Topbar
+------------------------------------------------------------ */
+
+#topbar { color: white; }
+#topbar strong { text-shadow: 1px 1px 1px black; }
+
+/* @end */
+
+
+
+/* @group Sidebar
+------------------------------------------------------------ */
+
+#sidebar .box .nav ul li a {
+  background-image: url(../../images/layout/dark/grey/sidebar_nav_list-arrow.gif);
+  _border-top: none; /* IE6 fix */
+}
+
+#sidebar .box .nav ul li:first-child a { border-top: none; }
+#sidebar .box .nav ul li:last-child a  { border-bottom: none; }
+
+#sidebar .box .nav ul li a:hover { background-color: #3b3b3b; }
+
+/* @end */
+
+
+
+/* @group Footer
+------------------------------------------------------------ */
+
+#footer .nav ul li {
+  background-image: url(../../images/layout/dark/grey/footer_list-arrow.gif);
+}
+
+#footer .button       { background: #282828; color: #bbb; }
+#footer .button:hover { background: #333; }
+
+/* @end */
+
+/* @end */

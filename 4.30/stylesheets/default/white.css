@@ -1,0 +1,299 @@
+/* @group Imports
+============================================================ */
+
+@import url("shared.css");
+
+/* @end */
+
+
+
+
+
+
+
+
+
+
+/* @group Generic
+============================================================ */
+
+body,
+body #body-wrapper { background-color: #d7d7d7; }
+
+#header ul.nav li a:hover,
+#header ul.nav li a.active,
+#footer a:hover,
+#footer h2, #footer h3, #footer h4, #footer h5,
+#footerbar a:hover {
+  color: black;
+}
+
+#header ul.nav li a,
+#footer,
+#footerbar { text-shadow: 0 1px white; }
+
+#header ul.nav li ul li a { text-shadow: none; }
+
+/* @end */
+
+
+
+
+
+
+
+
+
+
+/* @group Content Elements
+============================================================ */
+
+
+
+/* @group Links
+------------------------------------------------------------ */
+
+a       { color: black; }
+a:hover { color: #666; }
+
+/* @end */
+
+/* @end */
+
+
+
+
+
+
+
+
+
+
+/* @group Custom Elements
+============================================================ */
+
+
+
+/* @group Preview Showcase
+------------------------------------------------------------ */
+
+#preview #showcase .rounded-corners-top {
+  background-image: url(../../images/layout/default/white/preview_round-corners_top.png);
+}
+
+/* @end */
+
+/* @end */
+
+
+
+
+
+
+
+
+
+
+/* @group Layout Options
+============================================================ */
+
+
+
+/* @group Boxed
+------------------------------------------------------------ */
+
+body.boxed { background-color: #ccc !important; }
+
+body.boxed #body-wrapper { 
+  box-shadow: 0 0 35px rgba(0, 0, 0, .4);
+  -moz-box-shadow: 0 0 35px rgba(0, 0, 0, .4);
+  -webkit-box-shadow: 0 0 35px rgba(0, 0, 0, .4);
+  *border: 1px solid #888; /* IE fix */
+}
+
+/* @end */
+
+
+
+/* @group Preview
+------------------------------------------------------------ */
+
+body.preview #main { 
+  background-image: url(../../images/layout/default/white/head.png); 
+}
+
+body.preview #header { border-bottom: none; }
+
+/* @end */
+
+
+
+/* @group Minimal Layout
+------------------------------------------------------------ */
+
+
+body.minimal #header,
+body.minimal #bottombar,
+body.minimal #footer,
+body.minimal #footerbar { background-color: #f8f8f8; }
+
+body.minimal #topbar    { background-color: #555; }
+
+body.minimal.no-topbar #bottombar,
+body.minimal.no-topbar #footer { border-top: none; }
+
+body.minimal.no-topbar #header { border-bottom: none; }
+
+body.minimal.no-topbar #main .wrapper,
+body.minimal.no-topbar #bottombar .wrapper,
+body.minimal.no-topbar #footer .wrapper { border-top: 1px solid #bbb; }
+
+body.minimal.preview #main { background-image: none; }
+
+body.minimal.preview #main .wrapper { border-top: none; }
+
+body.minimal.preview #preview #showcase .rounded-corners-top {
+  background-image: url(../../images/layout/default/white/minimal/preview_round-corners_top.png);
+}
+
+/* @end */
+
+/* @end */
+
+
+
+
+
+
+
+
+
+
+/* @group Layout Structure
+============================================================ */
+
+
+
+/* @group Main
+------------------------------------------------------------ */
+
+#main { border-bottom: 1px solid white; }
+
+/* @end */
+
+
+
+/* @group Header
+------------------------------------------------------------ */
+
+#header {
+  background: url(../../images/layout/default/white/head.png) repeat-x;
+  border-bottom: 1px solid #aaa;
+}
+
+#header #logo h1 a {
+  background-image: url(../../images/layout/default/white/logo.png);
+}
+
+
+/* Navigation */
+
+#header ul.nav li {
+  background-image: url(../../images/layout/default/white/nav_bg.png);
+}
+
+#header ul.nav li a { color: #777; }
+
+
+/* Dropdown Menu */
+
+#header ul.nav li ul {
+  background-image: url(../../images/layout/default/white/nav_dropdown_arrow.gif);
+}
+
+#header ul.nav li ul li a {
+  background-color: #ddd;
+  border-color: #aaa;
+  color: #666;
+}
+
+#header ul.nav li ul li a:hover {
+  background-color: #ccc;
+}
+
+#header ul.nav li ul li:last-child a,
+#header ul.nav li ul li ul li:last-child a {
+  border-bottom-color: #aaa;
+}
+
+/* @end */
+
+
+
+/* @group Topbar
+------------------------------------------------------------ */
+
+#topbar {
+  background: #b0b0b0 url(../../images/layout/default/white/topbar_bg.png) repeat-x;
+  color: white;
+}
+
+#topbar strong { text-shadow: 1px 1px 1px black; }
+
+/* @end */
+
+
+
+/* @group Bottombar
+------------------------------------------------------------ */
+
+#bottombar { border-top: 1px solid #bbb; }
+
+/* @end */
+
+
+
+/* @group Footer
+------------------------------------------------------------ */
+
+#footer,
+#footer .button { color: #555; }
+
+#footer {
+	background-image: url(../../images/layout/default/white/footer_bg.png);
+  border-top: 1px solid #bbb;
+}
+
+#footer .hr,
+#footer .box h4,
+#footer .nav ul li a {
+  background-image: url(../../images/layout/default/white/footer_line.gif);
+}
+
+#footer a { color: #666; }
+
+#footer .nav ul li {
+  background-image: url(../../images/layout/default/white/footer_list-arrow.gif);
+}
+
+#footer .button       { background: #cacaca; border: 1px solid #bababa; }
+#footer .button:hover { background: #bababa; }
+
+/* @end */
+
+
+
+/* @group Footerbar
+------------------------------------------------------------ */
+
+#footerbar,
+#footerbar a { color: #777; }
+
+#footerbar,
+body.footerbar-inline #footerbar .wrapper {
+  background-image: url(../../images/layout/default/white/footer_line.gif);
+}
+
+/* @end */
+
+/* @end */
