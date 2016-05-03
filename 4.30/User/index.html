@@ -1,82 +1,85 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html>
-	<head>
-		<title>USERNAME</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery.poptrox.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/init.js"></script>
-		<noscript>
-			<link rel="stylesheet" href="css/skel.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-xlarge.css" />
-		</noscript>
-		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
-	</head>
-	<body id="top">
+<head>
+    <meta charset="UTF-8">
+    <title>User</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <script type="text/javascript" src="js/libs/modernizr.min.js"></script>
+</head>
+<body>
+<div class="topbar-wrap white">
+    <div class="topbar-inner clearfix">
+        <div class="topbar-logo-wrap clearfix">
+            <ul class="navbar-list clearfix">
+                <li><a class="on" href="index.html">Home</a></li>
+                <li><a href="../index.html" target="_blank">ChinaKnow</a></li>
+            </ul>
+        </div>
 
-		<!-- Header -->
-			<header id="header">
-				<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
-				<h1><strong>I am Strata</strong>, a super simple
-				responsive site template freebie
-				crafted by  HTML5 </h1>
-			</header>
+    </div>
+</div>
+<div class="container clearfix">
+    <div class="sidebar-wrap">
+        <div class="sidebar-title">
+           <a href="#"> <img src="images/avatar.jpg"/> </a>
+        </div>
+        <div class="sidebar-content">
+            <ul class="sidebar-list">
+                <li>
+                    <a href="#"><i class="icon-font">&#xe003;</i>Management</a>
+                    <ul class="sub-menu">
+                        <li><a href="post-design.html">My Post</a></li>
+                        <li><a href="post-design.html">My Comment</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="icon-font">&#xe018;</i>Information</a>
+                    <ul class="sub-menu">
+                        <li><a href="tag-design.html">More</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--/sidebar-->
+    <div class="main-wrap">
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font">&#xe06b;</i><span>Welcome</span></div>
+        </div>
 
-		<!-- Main -->
-			<div id="main">
-
-				<!-- One -->
-					<section id="one">
-                        <h2>My Posts</h2>
-						<header class="major">
-							<h2>Ipsum lorem dolor aliquam ante commodo<br />
-							magna sed accumsan arcu neque.</h2>
-						</header>
-						<p>Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubilia.</p>
-                        <header class="major">
-                            <h2>Ipsum lorem dolor aliquam ante commodo<br />
-                                magna sed accumsan arcu neque.</h2>
-                        </header>
-                        <p>Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubilia.</p>
-						<ul class="actions">
-							<li><a href="#" class="button">Learn More</a></li>
-						</ul>
-					</section>
-
-				<!-- Two -->
-					<section id="one">
-						<h2>My comment</h2>
-                        <header class="major">
-                            <h2>Ipsum lorem dolor aliquam ante commodo<br />
-                                magna sed accumsan arcu neque.</h2>
-                        </header>
-                        <p>Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubilia.</p>
-                        <header class="major">
-                            <h2>Ipsum lorem dolor aliquam ante commodo<br />
-                                magna sed accumsan arcu neque.</h2>
-                        </header>
-                        <p>Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubilia.</p>
-                        <ul class="actions">
-                            <li><a href="#" class="button">Learn More</a></li>
-                        </ul>
-                    </section>
+        <div class="result-wrap">
+            <div class="result-title">
+                <h1>Basic Information</h1>
+            </div>
+            <div class="result-content">
+                <ul class="sys-info-list">
+                    <li>
+                        <label class="res-lab">UserName</label><span class="res-info">ABC</span>
+                    </li>
+                    <li>
+                        <label class="res-lab">Email</label><span class="res-info">abc@163.com</span>
+                    </li>
+                    <li>
+                        <label class="res-lab">Rank</label><span class="res-info">Level 1</span>
+                    </li>
+                    <li>
+                    <label class="res-lab">Goal</label><span class="res-info">100</span>
+                </li>
+                    <li>
+                    <label class="res-lab">icon</label><img src="images/onShow.gif"/>
+                </li>
+                    <li>
+                        <label class="res-lab">Invitation Code</label><span class="res-info">1234567890dsdfasfajdk</span><img src="images/send.gif"/>
+                    </li>
 
 
-
-		<!-- Footer -->
-			<footer id="footer">
-                <ul class="copyright">
-                    <li><a href="userData.html">Modify Your Information</a> </li>
                 </ul>
-				<ul class="copyright">
-					<li>&copy; Untitled</li><li>2016 ChinaKnow </li>
-				</ul>
-			</footer>
+            </div>
+        </div>
 
-	</body>
+    </div>
+    <!--/main-->
+</div>
+</body>
 </html>
