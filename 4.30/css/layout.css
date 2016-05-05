@@ -911,8 +911,8 @@ ul.gallery.frame li { margin: 6px; }
 .post-box .post-data { margin-top: 0; }
 
 .post-data {
-  font-size: 85%;
-  margin: 12px 0;
+  font-size: 100%;
+  margin: 12.5px 0;
   overflow: hidden;
 }
 
@@ -922,28 +922,69 @@ ul.gallery.frame li { margin: 6px; }
 .post-data span {
   border-bottom: none;
   display: block;
-  padding: 2px 6px;
+  padding: 4px 7px;
 }
 
 .post-data span.date,
 .post-data span.categories,
-.post-data span.comments {
+.post-data span.comments,
+.post-data span.like-count,
+.post-data span.apply{
   background-repeat: no-repeat;
   padding-left: 26px;
   float: left;
-  width: 169px;
+  width: 220px;
+}
+.post-data span.like-count .like-it-icon{
+  background: url("../images/like-btn.png") no-repeat 10px -20px;
 }
 
-.post-data span.date       { background-position: 5px -54px; }
-.post-data span.categories { background-position: -25px -24px; }
-.post-data span.comments   { background-position: -55px 6px; }
+.txt { margin-bottom: 10px;}
+.user { color: #1c415d; }
+.info { height: 30px; line-height: 30px; font-size: 15px; margin: 0 20px 10px 0;}
+.info .time { color: #636363; float: left; height: 30px; padding-left: 20px; background: url("../images/bg1.jpg") no-repeat 1px 6px;}
+.info .tag {color: #636363; margin-left: 30%; height: 30px; padding-left: 20px;background: url("../images/tag.png") no-repeat 1px 2px;}
+.info .praise { color: #369; float: right; height: 30px; padding-left: 18px; background: url("../images/bg2.jpg") no-repeat 1px 6px;}
+.info .praise:hover { text-decoration: underline; background: url("../images/bg3.jpg") no-repeat 1px 6px;}
+
+.praises-total { margin: 0 0 10px 0; height: 30px; background: url("../images/praise.png") no-repeat 1px 12px rgb(247, 247, 247); padding: 5px 0 5px 25px; line-height: 30px;}
+
+.clear-ar { *height:1%;}
+.clear-ar:after { content:"."; display:block; height:0; clear:both; visibility:hidden}
+.box { border-top: 1px solid #eee; position: relative; padding: 20px 0}
+.box:hover .close { display: block;}
+.main { margin-bottom: 10px;}
+.txt { margin-bottom: 10px;}
+.user { color: #183850; }
+.pic { margin-right: 5px; width: 200px; border: 1px solid #eee;}
+
+.text-box .comment-ar { border: 1px solid #eee; display: block; height: 28px; width: 428px; padding: 2px; resize: none; color: #ccc;font-size: 14px;margin-bottom: 15px;}
+.text-box .btn { font-size: 12px; font-weight: bold; display: none; float: right; width: 65px; height: 25px; border: 1px solid #0C528D; color: #fff; background: #4679AC;}
+.text-box .btn-ar { border: 1px solid #ccc; color: #505050; background: #F7F7F7;margin-bottom: 10px;}
+.text-box .word{ display: none; float: right; margin: 7px 10px 0 0; color: #666;}
+.text-box .comment-ar{ height: 50px; color: #333;}
+
+.text-box .word{ display: inline;}
+.comment-box { padding: 10px 0; border-top: 1px solid #eee;}
+.comment-box:hover { background: rgb(247, 247, 247);}
+.comment-box .myhead { float: left; width: 30px; height: 30px; margin-right: 10px;}
+.comment-box .comment-content { float: left; width: 400px; }
+.comment-box .comment-content .comment-time { color: #ccc; margin-top: 3px; line-height: 16px; position: relative;}
+.comment-box .comment-content .comment-praise { display: none; color: #369; padding-left: 17px; height: 20px; background: url("../images/praise.png") no-repeat;  position: absolute; bottom: 40%; right: 80px;}
+.comment-box .comment-content .comment-operate { display: none; color: #369; height: 20px;  position: absolute; bottom: 40%; right: 10px;}
+.comment-box .comment-content:hover .comment-praise { display: inline-block;}
+.comment-box .comment-content:hover .comment-operate { display: inline-block;}
+
+
 
 
 /* Fullwidth */
 
 body.fullwidth .post-data span.date,
 body.fullwidth .post-data span.categories,
-body.fullwidth .post-data span.comments { width: 279px; }
+body.fullwidth .post-data span.comments,
+body.fullwidth .post-data span.like-count
+{ width: 279px; }
 
 
 /* No Boxes */
@@ -1327,7 +1368,7 @@ form .three-fourth { width: 453px; }
 
 form .full input[type=text],
 form .full input[type=password],
-form .full textarea         { width: 599px; }
+form .full textarea         { width: 600px; }
 
 form .one-half input[type=text],
 form .one-half input[type=password],
@@ -1933,6 +1974,8 @@ body.no-boxed-sidebar #sidebar .box .nav ul li a:hover {
   -webkit-box-shadow: none;
   text-shadow: none;
 }
+
+
 
 /* @end */
 

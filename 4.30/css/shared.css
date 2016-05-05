@@ -127,7 +127,9 @@ input[type=submit], input[type=reset],
 
 .post-data span.date,
 .post-data span.categories,
-.post-data span.comments { border-right: 1px solid #c2c2c2; }
+.post-data span.comments,
+.post-data span.like-count,
+.post-data span.apply{ border-right: 1px solid #c2c2c2; }
 
 #sidebar .box .nav ul li a { border-bottom: 1px solid #c2c2c2; }
 
@@ -478,13 +480,16 @@ input[type=submit]:active, input[type=reset]:active,
 
 .post-data span.date,
 .post-data span.categories,
-.post-data span.comments {
+.post-data span.comments ,
+.post-data span.like-count,
+.post-data span.apply{
   background-image: url(../../images/layout/default/shared/post-data_icons.png);
   border-left: 1px solid white;
 }
 
 .post-data span.date     { border-left: none; }
-.post-data span.comments { border-right: none; }
+.post-data span.apply{border-right: none;}
+.post-data span.like-count{border-right: none;}
 
 /* @end */
 

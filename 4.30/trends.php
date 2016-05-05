@@ -25,7 +25,6 @@ $rows=getAllArticle();
         <li><a href="forum.html">Forum</a></li>
        
         <li><a href="contct.html">Contact</a></li>
-        <li><button class="btnw"><a href="post-create.html">Share My Achievements</a></button></li>
     </ul>
 </div>
 <div id="LoginBox">
@@ -88,7 +87,7 @@ $rows=getAllArticle();
         <div class="search"></div>
         <div class="bg">
             <div class="column1">
-                <img src="images/trends/title3.gif" alt="" width="258" height="21" /><br />
+                <img src="images/trends/title3.gif" alt="" width="258" height="30" /><br />
                 <div id="items">
                     <div class="item">
                         <a href="article.html"><img src="images/trends/pic1.jpg" alt="" /></a>
@@ -133,6 +132,7 @@ $rows=getAllArticle();
                 <div class="news">
 
                     <a href="article.html"><img src="images/trends/photo1.jpg" alt="" width="183" height="97" /></a>
+                    <button class="btnw"><a href="post-create.html">Share Achievements</a></button>
                     <span>12 April 2016</span><br />
                     <p>We will invite 12 students to join this activity, We will have a visit to Microsoft Company, and you will have the chance to create a plan... </p>
                      <span>12 may 2016</span><br />

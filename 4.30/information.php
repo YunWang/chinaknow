@@ -67,23 +67,18 @@ if ($rows == null) {
         </div>
         <img src="images/infor/title1.gif" alt="" width="126" height="21" /><br />
         <ul id="navigation">
-            <?php $i = 1; foreach ($rows as $row):?>
-                <?php if (1 == $i%2) :?>
-                <li class="color"><a href="activity.php?id=<?php echo $row['id'];?>"><?php echo $row['activityTitle'];?></a></li>
-                <?php endif;?>
-                <?php if (0 == $i%2) :?>
-                <li><a href="activity.php?id=<?php echo $row['id'];?>"><?php echo $row['activityTitle'];?></a></li>
-                <?php endif;?>
-            <?php $i++; endforeach;?>
+            <li class="color"><a href="#">Travel</a></li>
+            <li><a href="#">Culture</a></li>
+            <li class="color"><a href="#">Food</a></li>
+            <li><a href="#">Life</a></li>
+
         </ul>
     </div>
     <div id="content">
         <div class="search"></div>
         <div class="bg">
             <div class="column1">
-                <img src="images/infor/title2.gif" alt="" width="258" height="21" /><br />
-                <p>In this page, you can see lots of interesting activities. Through these activities, you may have a better understanding of China, you may make friends with people in conmmon, and you will love China at the same time. But, we must remind you that our activities are suitable for university students, so you must offer you real information including name, telphone number and university. Otherwise you may be uncapable to join us. Anyway, wish you enjoy studying in China!</p>
-                <img src="images/infor/title3.gif" alt="" width="258" height="21" /><br />
+                <img src="images/infor/title3.gif" alt="" width="258" height="30" /><br />
                 <div id="items">
                     <div class="item">
                         <a href="article.html"><img src="images/infor/pic1.jpg" alt="" /></a>
@@ -92,6 +87,16 @@ if ($rows == null) {
                     <div class="item">
                         <a href="article.html"><img src="images/infor/pic2.jpg" alt="" /></a>
                         <span><a href="article.html">VR Experience</a></span>
+                    </div>
+                </div>
+                <div id="items">
+                    <div class="item">
+                        <a href="article.html"><img src="images/infor/pic2.jpg" alt="" /></a>
+                        <span><a href="article.html">VR Experience</a></span>
+                    </div>
+                    <div class="item">
+                        <a href="article.html"><img src="images/infor/pic1.jpg" alt="" /></a>
+                        <span><a href="article.html">DIY</a></span>
                     </div>
                 </div>
                 <div id="pagination">
