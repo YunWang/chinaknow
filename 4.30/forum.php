@@ -27,7 +27,6 @@ $rowsTag=getAllTag();
         <li><a href="trends.html">Trends</a></li>
         <li><a href="forum.html">Forum</a></li>
         <li><a href="contct.html">Contact</a></li>
-        <li><button class="btnw"><a href="topic-create.html">Share My Idea</a></button></li>
     </ul>
 </div>
 <div id="LoginBox">
@@ -79,6 +78,7 @@ $rowsTag=getAllTag();
         <div class="bg">
             <div class="column1">
                 <img src="images/forum/title3.gif" alt="" width="258" height="21" /><br />
+                <li><button class="btnw2"><a href="topic-create.html">Write a Post</a></button></li>
                 <?php foreach ($rowsPost as $rowPost):?>
                 <article class="type-post hentry clear">
                     <header class="clear">
@@ -193,7 +193,7 @@ $rowsTag=getAllTag();
                     </div>
             </div>
             <div class="column2">
-                <img src="images/forum/title4.gif" alt="" width="133" height="18" /><br />
+                <img src="images/forum/title4.gif" alt="" width="133" height="30" /><br />
                 <div class="news">
 
                     <a href="#"><img src="images/forum/photo1.jpg" alt="" width="183" height="97" /></a>

@@ -14,7 +14,7 @@ $sql="select *from ".ARTICLECOMMENT." where postId='{$id}'";
 $rowsComment=fetchAll($sql);
 ?>
 <!DOCTYPE html>
- <head>
+<head xmlns="http://www.w3.org/1999/html">
     <title>Article </title>
 
     <!-- Meta-Tags -->
@@ -26,6 +26,21 @@ $rowsComment=fetchAll($sql);
     <!-- Stylesheets: Screen, Projection -->
     <link href="css/layout.css" media="screen, projection" rel="stylesheet" type="text/css" />
     <link href="css/article.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
+    <!--editor-->
+    <link rel="stylesheet"href="kindeditor/themes/default/default.css"/>
+    <script charset="utf-8" src="kindeditor/kindeditor-all-min.js"></script>
+    <script charset="utf-8" src="kindeditor/lang/zh_CN.js"></script>
+
+
+    <script>
+        KindEditor.ready(function(K) {
+            window.editor = K.create('#editor_id');
+        });
+    </script>
+    <!--end-->
+
+    
 
     <!--[if IE 6]>
       <script src="js/ie.pngfix.js" type="text/javascript"></script>
@@ -41,6 +56,7 @@ $rowsComment=fetchAll($sql);
 
   <body class="">
     <div id="body-wrapper">
+
 
       <div id="header">
         <div class="wrapper">
@@ -75,123 +91,98 @@ $rowsComment=fetchAll($sql);
                 Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor.
               </p>
               -->
-              <div class="post-box">
-                <p class="post-data">
-                  <span class="date"><?php echo date("M-j-Y",$row['publishTime']);?></span>
-                  <span class="categories">Tag,<?php echo $row['tagName'];?></span>
-                  <?php 
-                      $sql="select id from ".POSTCOMMENT." where postId='{$row['id']}'";
-                      $commentNumber = getResultNumber($sql);
-                  ?>
-                  <span class="comments"><?php echo$commentNumber;?> Comments</span>
-                </p> 
+              <div class="post-box" >
+                  <div class="post-box">
+                      <div class="info clear">
+                          <span class="time">02-14 23:01</span>
+                          <span class="tag">ABC</span>
+                          <a class="praise" href="#">like</a>
+                      </div>
+                      <div class="praises-total" total="4" style="display: block;">4 people like it</div>
+                  </div>
               </div>
 
             </div>
             <!-- END .entry -->
 
-
             <div id="comments">
+                <div id="list">
+                  <ol class="comment-list">
+                      <li id="comment-1" class="comment">
+                          <div class="gravatar">
+                              <img src="images/gravatar_2.jpg" alt="" height="70" width="70" />
+                          </div>
+                          <div class="content">
+                              <cite class="name">Mr. Smith</cite>
+                              <div class="text">
+                                  <p>
+                                      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in anim id est laborum. Aehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                  </p>
+                                  <div class="info clear-ar">
+                                      <span class="time">02-14 23:01</span>
+                                      <a class="praise" href="#;">Like</a>
+                                  </div>
+                                  <div class="praises-total" total="4" style="display: block;">4 people like it</div>
+                                  <div class="comment-list">
+                                      <div class="comment-box clear-ar" user="other">
+                                          <img class="myhead" src="images/4.jpg" alt=""/>
+                                          <div class="comment-content">
+                                              <p class="comment-text">
+                                                  <span class="user">Rogy:</span>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+                                              </p>
+                                              <p class="comment-time">
+                                                  2014-02-19 14:36
+                                                  <a href="#" class="comment-praise" total="0" my="0">Like</a>
+                                                  <a href="#" class="comment-operate">Reply</a>
+                                              </p>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="text-box">
+                                      <textarea class="comment-ar" placeholder="  Comment..."></textarea>
+                                      <button class="btn-ar ">Replay</button>
+                                  </div>
+                              </div>
+                          </div>
 
-            	<ol class="comment-list">
-                <?php if ($rowsComment != null):?>
-                <?php foreach($rowsComment as $rowComment):?>
-            	  <li id="comment-1" class="comment">
-          	      <div class="gravatar">
-                    <img src="images/gravatar_2.jpg" alt="" height="70" width="70" />
-                    <a href="#" class="reply-link" rel="nofollow">Reply</a>
-          	      </div>
-                  <div class="content">
-                    <cite class="name"><?php echo $rowComment['publishName'];?></cite>
-                    <a class="meta-data" href="#"><?php echo date("M-j-Y",$rowComment['publishTime'])." at ".date("H:i:s",$rowComment['publishTime']);?></a>
-                    <div class="text">
-                      <p>
-                        <?php echo $rowComment['commentDetail'];?>
-                      </p>
-                      <!-- <p>
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in anim id est laborum. Aehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                      </p> -->
-                    </div>
-                  </div>
-            	  </li>
-              <?php endforeach;?>
-              <?php endif;?>
-            	  <li id="comment-2" class="comment">
-          	      <div class="gravatar">
-                    <img src="images/gravatar_1.jpg" alt="" height="70" width="70" />
-                    <a href="#" class="reply-link" rel="nofollow">Reply</a>
-          	      </div>
-                  <div class="content">
-                    <cite class="author"><a class="url" rel="external nofollow" href="#">Ruven</a></cite>
-                    <a class="meta-data" href="#">Nov 7, 2010 at 8:22 am</a>
-                    <div class="text">
-                      <p>
-                        Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.
-                      </p>
-                    </div>
-                  </div>
+                          </li>
 
-            	    <ol class="comment-list">
-                	  <li id="comment-3" class="comment">
-              	      <div class="gravatar">
-                        <img src="images/gravatar_2.jpg" alt="" height="49" width="49" />
-              	      </div>
-                      <div class="content">
-                        <cite class="author">Mr. Smith</cite>
-                        <a class="meta-data" href="#">Nov 6, 2010 at 4:30 am</a>
-                        <div class="text">
-                          <p>
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in anim id est laborum. Aehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                          </p>
-                        </div>
-                      </div>
-                	  </li>
+                      <li id="comment-2" class="comment">
+                          <div class="gravatar">
+                              <img src="images/gravatar_4.jpg" alt="" height="70" width="70" />
+                              <a href="#" class="reply-link" rel="nofollow">Reply</a>
+                          </div>
+                          <div class="content">
+                              <cite class="author">Doris</cite>
+                              <div class="text">
+                                  <p>
+                                      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in anim id est laborum. Aehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                  </p>
+                                  <div class="info clear-ar">
+                                      <span class="time">02-14 23:01</span>
+                                      <a class="praise" href="#">Like</a>
+                                  </div>
+                                  <div class="praises-total" total="4" style="display: block;">0 people like it</div>
+                              </div>
+                              <div class="text-box">
+                                  <textarea class="comment-ar" placeholder="  Comment..."></textarea>
+                                  <button class="btn-ar ">Replay</button>
+                              </div>
+                          </div>
+                      </li>
+                   </ol>
+                </div>
 
-                	  <li id="comment-4" class="comment">
-              	      <div class="gravatar">
-                        <img src="images/gravatar.jpg" alt="" height="49" width="49" />
-              	      </div>
-                      <div class="content">
-                        <cite class="author"><a class="url" rel="external nofollow" href="#">Toby</a></cite>
-                        <a class="meta-data" href="#">Nov 7, 2010 at 8:22 am</a>
-                        <div class="text">
-                          <p>
-                            Morbi interdum mollis sapien. Sed ac risus.
-                          </p>
-                        </div>
-                      </div>
-                	  </li>
 
-                  </ol>
-
-            	  </li>
-
-            	  <li id="comment-5" class="comment">
-          	      <div class="gravatar">
-                    <img src="images/gravatar_4.jpg" alt="" height="70" width="70" />
-                    <a href="#" class="reply-link" rel="nofollow">Reply</a>
-          	      </div>
-                  <div class="content">
-                    <cite class="author">Doris</cite>
-                    <a class="meta-data" href="#">Nov 6, 2010 at 4:35 am</a>
-                    <div class="text">
-                      <p>
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in anim id est laborum. Aehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                      </p>
-                    </div>
-                  </div>
-            	  </li>
-
-              </ol>
               <!-- .ol.comment-list -->
 
               <div id="respond">
                 <h3>Leave a Reply</h3>
                 <form method="post" action="doArticleComment.php?id=<?php echo $row['id'];?>">
                   <div class="divider">
-                  <p class="full">
-                    <textarea name="commentDetail" id="comment" class="textarea required" cols="40" rows="8"></textarea>
-                  </p>
+                      <p class="full">
+                          <textarea id="editor_id" name="content" style="width:98%;height:300px;"></textarea>
+                      </p>
                   <p>
                     <input type="submit" value="Submit Reply" id="submit"/>
                     <!-- <button id="submit" name="submit" type="submit">Submit Reply</button> -->
@@ -234,10 +225,10 @@ $rowsComment=fetchAll($sql);
 
         </div>
         <!-- END .wrapper -->
-      </div>
-      <!-- END #main -->
 
 
+    </div>
+    <!-- END #main -->
 
     </div>
     <!-- END #body-wrapper -->

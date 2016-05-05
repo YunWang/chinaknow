@@ -2,7 +2,7 @@
 include_once("include.php");
 $id=$_REQUEST['id'];
 // $id=14;
-$sql="select *from ".ACTIVITY." where id = '{$id}'";
+$sql="select *from ".ACTIVITY."where id ='{$id}'";
 // echo $sql;
 $row=fetchOne($sql);
 
@@ -10,6 +10,7 @@ $pageSize=5;
 $rows=getActivityByPage($pageSize);
 ?>
 <!DOCTYPE html>
+<html>
  <head>
     <title>Article </title>
 
