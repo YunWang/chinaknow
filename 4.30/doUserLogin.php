@@ -3,7 +3,7 @@ require_once './include.php';
 // require_once './include.php';
 
 $email=$_POST['email'];
-if (verifyEmailFormat($emial)) {
+if (verifyEmailFormat($email)) {
 	# code...
 	$password=md5($_POST['password']);
 	$sql="select username,email,password from ".USER." where email = '{$email}' and password = '{$password}'";

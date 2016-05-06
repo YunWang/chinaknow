@@ -40,7 +40,7 @@ if(!$rows){
                 <li>
                     <a href="#"><i class="icon-font">&#xe003;</i>Admin</a>
                     <ul class="sub-menu">
-                        <li><a href="admin-design.php"><i class="icon-font">&#xe0017;</i>Management</a></li>
+                        <li><a href="admin-design.php"><i class="icon-font">&#xe017;</i>Management</a></li>
                     </ul>
                 </li>
                 <li>

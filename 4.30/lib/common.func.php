@@ -8,6 +8,8 @@ function alertMes($mes,$url) {
 
 function verifyEmailFormat($email){
     $pattern = "/^([0-9A-Za-z\\-_\\.]+)@([0-9a-z]+\\.[a-z]{2,3}(\\.[a-z]{2})?)$/i";
+    // $pattern="/\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/";
+    // $pattern="/\w+@\w+\.\w+/"; 
     if ( preg_match( $pattern, $email ) )
     {
         return true;

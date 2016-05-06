@@ -86,7 +86,14 @@ function getFileName($uploaddir="../files/") {
  * 上传图片
  * @param string $type
  */
-function uploadFile($type) {
+function uploadFile() {
+    $type = array(
+        "jpg",
+        "gif",
+        "bmp",
+        "jpeg",
+        "png"
+    );
     if (checkFileType($type)) {
         $uploadfile=getFileName();
         if ( is_uploaded_file($_FILES['file']['tmp_name']))
@@ -95,7 +102,7 @@ function uploadFile($type) {
             if (move_uploaded_file($_FILES['file']['tmp_name'], $uploadfile)){
                 // 输出图片预览
                 //                 echo "<script>alert(Successfully!);</script>";
-                echo "<center><img src='$uploadfile'></center>";
+                echo "<img src='$uploadfile'>";
                 // echo "<br><center><a href='javascript:history.go(-1)'>Upload again!</a></center>";
             } else {
                 // echo "上传失败";
@@ -107,6 +114,7 @@ function uploadFile($type) {
             echo "Failed!";
         }
     }
+    return $uploadfile;
 }
 // uploadFile($type);
 // $cmd=$_POST['upload'];

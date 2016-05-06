@@ -20,4 +20,6 @@ require_once 'user.inc.php';
 require_once 'upload.func.php';
 require_once 'post.inc.php';
 require_once 'baidu_transapi.php';
+require_once 'email.class.php';
+require_once 'Smtp.class.php';
 connect();

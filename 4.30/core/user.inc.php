@@ -11,15 +11,27 @@ function register(){
     //取出所有邀请码
     $sql="select invitationCode from ".USER;
     $rows=fetchAll($sql);
-    $arr['username']=$_POST['username'];
+    $arr['username']=stripslashes(trim($_POST['username'])); 
     // echo "Username".$_POST['username'];
     $arr['email']=$_POST['email'];
+    if (!verifyEmailFormat($arr['email'])) {
+        # code...
+        alertMes("Sorry,your email format is wrong,please enter again!","../register.html");
+    }
     $arr['university']=$_POST['university'];
     $arr['phone']=$_POST['phone'];
     $arr['country']=$_POST['country'];
     $arr['address']=$_POST['address'];
-    $arr['password']=md5($_POST['password']);
-    $arr['face']="This is a picture!";
+    $arr['password']=md5(trim($_POST['password'])); 
+    $arr['token'] = md5($username.$password.$regtime); //创建用于激活识别码 
+    $arr['token_exptime'] = time()+60*60*24;//过期时间为24小时后 
+    // $arr['face']="This is a picture!";
+    if ($_FILE == null) {
+        # code...
+        $arr['face']=DEFAULTFACE;
+    }else{
+        $arr['face']=uploadFile();
+    }
     $arr['regTime']=time();
     // echo "POST:".$_POST['invitationCode'];
     $arr['invitationCode']=$_POST['invitationCode'];
@@ -48,8 +60,32 @@ function register(){
     $arr['level']="1";
     $arr['AuditState']=0;
     if (insert(USER, $arr)) {
-        $_SESSION['username']=$arr['username'];
-        alertMes("Register Successfully!","index.html");
+        // $_SESSION['username']=$arr['username'];
+        // alertMes("Register Successfully!Please login your email and active your account.","index.html");
+        $smtpserver = "smtp.sina.com"; //SMTP服务器，如：smtp.163.com 
+        $smtpserverport = 25; //SMTP服务器端口，一般为25 
+        $smtpusermail = "ivanchhch@sina.com"; //SMTP服务器的用户邮箱，如xxx@163.com 
+        $smtpuser = "ivanchhch@sina.com"; //SMTP服务器的用户帐号xxx@163.com 
+        $smtppass = "chenhanchi"; //SMTP服务器的用户密码 
+        $smtp = new Smtp($smtpserver, $smtpserverport, true, $smtpuser, $smtppass); //实例化邮件类 
+        $emailtype = "HTML"; //信件类型，文本:text；网页：HTML 
+        $smtpemailto = $arr['email']; //接收邮件方，本例为注册用户的Email 
+        $smtpemailfrom = $smtpusermail; //发送邮件方，如xxx@163.com 
+        $emailsubject = "Chinaknow:Active your account";//邮件标题 
+        //邮件主体内容 
+        $emailbody = "亲爱的".$arr['username']."：<br/>感谢您在我站注册了新帐号。<br/>请点击链接激活您的帐号。<br/> 
+        <a href='http://www.helloweba.com/demo/register/active.php?verify=".$arr['token']."' target= 
+        '_blank'>http://www.helloweba.com/demo/register/active.php?verify=".$arr['token']."</a><br/> 
+        如果以上链接无法点击，请将它复制到你的浏览器地址栏中进入访问，该链接24小时内有效。"; 
+        //发送邮件 
+        $rs = $smtp->sendmail($smtpemailto, $smtpemailfrom, $emailsubject, $emailbody, $emailtype); 
+        if($rs==1){ 
+            $_SESSION['username']=$arr['username'];
+            alertMes("Register Successfully!Please login your email and active your account.","index.html");    
+        }else{ 
+            alertMes("Sorry,Some error occur,please try later","../register.html"); 
+        } 
+
     }else{
         alertMes("Register Failed!","register.html");
     }
